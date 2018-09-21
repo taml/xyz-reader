@@ -31,7 +31,9 @@
     <dimen name="article_margin_side">0dp</dimen>
     <dimen name="article_margin_bottom">8dp</dimen>
 
-    <dimen name="fab_press_translation_z">8dp</dimen>
+    <!-- fab -->
+    <dimen name="fab_translation_z">6dp</dimen>
+    <dimen name="fab_press_translation_z">12dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
 
 </resources>
