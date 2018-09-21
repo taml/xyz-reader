@@ -1,0 +1,104 @@
+<!-- Layout implemented with help from this tutorial - http://skilltomastery.blogspot.com/2016/05/tutorial-flexible-space-with-image.html -->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_image_size"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginBottom="@dimen/appbar_title_margin_bottom"
+            app:expandedTitleMarginStart="@dimen/appbar_title_margin_start"
+            app:expandedTitleMarginEnd="@dimen/appbar_title_margin_end"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!--suppress AndroidLintContentDescription -->
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:background="@color/photo_placeholder"
+                tools:ignore="contentDescription"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+                <ImageButton
+                    android:id="@+id/navigation_up"
+                    android:layout_width="@dimen/appbar_up"
+                    android:layout_height="?actionBarSize"
+                    android:paddingRight="@dimen/xlarge"
+                    android:contentDescription="@string/up"
+                    android:src="@drawable/ic_arrow_back"
+                    android:background="?selectableItemBackgroundBorderless" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:id="@+id/meta_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/article_margin_side"
+                    android:layout_marginRight="@dimen/article_margin_side"
+                    android:padding="@dimen/medium">
+
+                    <TextView
+                        style="@style/BylineStyle"
+                        android:id="@+id/article_byline"
+                        android:layout_marginTop="@dimen/small"
+                        android:layout_marginBottom="@dimen/large" />
+
+                    <TextView
+                        android:id="@+id/article_body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/article_margin_bottom"
+                        android:textColor="@color/blue_grey_dark"
+                        android:textColorLink="@color/colorAccent"
+                        android:textSize="@dimen/detail_body_text_size"
+                        android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_gravity="end|bottom"
+        android:stateListAnimator="@animator/fab_state_list_anim"
+        app:pressedTranslationZ="@dimen/fab_press_translation_z"
+        android:src="@drawable/ic_share" />
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <!-- list -->
+    <integer name="list_column_count">2</integer>
+
+</resources>

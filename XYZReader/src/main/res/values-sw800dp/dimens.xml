@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- appbar -->
+    <dimen name="appbar_title_margin_start">216dp</dimen>
+
+    <!-- detail -->
+    <dimen name="detail_image_size">400dp</dimen>
+    <dimen name="article_margin_side">200dp</dimen>
+    <dimen name="article_margin_bottom">100dp</dimen>
+</resources>

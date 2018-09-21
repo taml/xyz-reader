@@ -1,0 +1,37 @@
+<resources>
+    <!-- general -->
+    <dimen name="no_size">0dp</dimen>
+    <dimen name="xsmall">4dp</dimen>
+    <dimen name="small">8dp</dimen>
+    <dimen name="medium">16dp</dimen>
+    <dimen name="large">24dp</dimen>
+    <dimen name="xlarge">32dp</dimen>
+
+    <dimen name="byline_text_size">14sp</dimen>
+
+    <!-- appbar -->
+    <dimen name="appbar_list_height">112dp</dimen>
+    <dimen name="appbar_elevation">4dp</dimen>
+    <dimen name="appbar_title_margin_start">16dp</dimen>
+    <dimen name="appbar_title_margin_end">64dp</dimen>
+    <dimen name="appbar_title_margin_bottom">32dp</dimen>
+    <dimen name="appbar_up">56dp</dimen>
+
+    <!-- list -->
+    <dimen name="heading_text_size">20sp</dimen>
+    <dimen name="divider">3dp</dimen>
+    <dimen name="list_recycler_padding_top">120dp</dimen>
+    <dimen name="list_recycler_padding_bottom">28dp</dimen>
+
+    <!-- detail -->
+    <dimen name="detail_body_text_size">16sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
+
+    <dimen name="detail_image_size">250dp</dimen>
+    <dimen name="article_margin_side">0dp</dimen>
+    <dimen name="article_margin_bottom">8dp</dimen>
+
+    <dimen name="fab_press_translation_z">8dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+
+</resources>
